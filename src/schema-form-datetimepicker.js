@@ -4,7 +4,7 @@ angular.module('schemaForm-datetimepicker', ['schemaForm', 'mgcrea.ngStrap'])
   function(schemaFormProvider,  schemaFormDecoratorsProvider, sfPathProvider) {
 
     var picker = function(name, schema, options) {
-    if (schema.type === 'object' && schema.format == 'datetimepicker') {
+    if (schema.type === 'string' && schema.format == 'datetimepicker') {
       var f = schemaFormProvider.stdFormObj(name, schema, options);
       f.key  = options.path;
       f.type = 'datetimepicker';
